@@ -38,7 +38,6 @@ class Dragging{
         //Finding where the mouse begins
         this.xMouseStart = e.offsetX;
         this.yMouseStart = e.offsetY;
-        //this.mouseDown = true;
         if (this.rectBound == true ){
             this.mouseDown = true;
         }
@@ -109,7 +108,7 @@ class Dragging{
     boundsCheck(xMouse,yMouse,x,y,w,h){
         
         if(xMouse>x && xMouse<x+w && yMouse>y && yMouse<y+h){
-            console.log("true");
+            //console.log("true");
             return true;
         }
         else{
