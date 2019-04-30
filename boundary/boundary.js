@@ -76,8 +76,8 @@ class Dragging{
         this.dx = this.xMouse - this.xMouseStart;
         this.dy = this.yMouse - this.yMouseStart;
         
-        
-        if(this.mouseDown){
+        //Allowing the rectangle guide to be drawn
+        if(this.mouseDown && this.rectBound){
             console.log("mouse is down");
             this.draw();
         }
@@ -92,6 +92,7 @@ class Dragging{
     }
 
     draw(){
+    //Rectangle guide line
         this.drawRect(this.xMouseStart, this.yMouseStart, this.dx, this.dy, this.col);
 
     }
