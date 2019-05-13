@@ -1,20 +1,30 @@
 console.log("main js called");
+var buttonSet = [];
+//Calling Dragging class
+var myT = new Dragging(colArray[0][5], colArray[0][4], canvas);
 
-objectSet = [];
+//Calling to draw a ellipse
+//var ellipseOne = new Ellipse(0, 0, 50, 50, colArray[0][2]);
 
-var myT = new Point(200,100,50,50,colArray[0][4],colArray[0][4],canvas);
-var myT2 = new Point(600,300,50,colArray[0][7],colArray[0][3],canvas);
-objectSet.push(myT, myT2);
-
+//Buttons 
+var DragOne = new Button("Ellipse", 10, 100, 180, 90, colArray[0][0], colArray[0][1], colArray[0][2], colArray[0][3], colArray[0][4], canvas);
+var DragTwo = new Button("Rectangle", 10, 200, 180, 90, colArray[0][0], colArray[0][1], colArray[0][2], colArray[0][3], colArray[0][4], canvas);
+buttonSet.push(DragOne);
+buttonSet.push(DragTwo);
 
 function animate(){
-    ctx.clearRect(0,0,width,height);
+    ctx.clearRect(0,0, width, height);
 
-    for(var i=0; i<this.objectSet.length; i++){
-        this.objectSet[i].update();
+    for(var i=0; i<buttonSet.length; i++){
+        buttonSet[i].update();
+
     }
+    
+    myT.update();
+    //ellipseOne.update();
 
     
     window.requestAnimationFrame(animate);
 }
 animate();
+

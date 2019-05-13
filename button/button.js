@@ -1,86 +1,99 @@
-console.log("point js called");
+console.log("button js called");
 
-class Point{
-    constructor(x,y,R,c1,c2,canvas){
+class Button{
+    constructor(text, x, y, w, h, stroke, fill, col2, textC, over, canvas){
         this.x = x;
         this.y = y;
-        this.R = R;
-        this.c1 = c1;
-        this.c2 = c2;
-        this.col = c1;
+        this.w = w;
+        this.h = h;
+        this.stroke = stroke;
+        this.fill = fill;
+        this.col2 = col2;
+        this.textC = textC;
+        this.text = text;
+        this.over = over;
+
+        //mouse location = 0
         this.xMouse = 0;
         this.yMouse = 0;
 
-        this.mouseDown = false;
+        //Within button boundaries variables
+        this.rectBound = false;
+        this.rectBoundDown = false;
 
-        this.dragging = false;
-        this.circularBound = true;
+        this.element = canvas;
 
         //Listeners 
-        this.element = canvas;
-        this.element.addEventListener('mousedown', this.down.bind(this));
-        this.element.addEventListener('mousemove', this.move.bind(this));
-        this.element.addEventListener('mouseup', this.up.bind(this));
+        this.element.addEventListener('mousedown', this.mDown.bind(this));
+        this.element.addEventListener('mousemove', this.mMove.bind(this));
+        this.element.addEventListener('mouseup', this.mUp.bind(this));
+
     }
 
-    //functions 
 
-    down(e){
-        if(this.circularBound){
-            this.dragging = true;
+    mDown(e){     
+        //Checking if its within button boundary
+        if (this.rectBound = this.boundsCheck(this.xMouse, this.yMouse, this.x, this.y, this.w, this.h)){
+            this.rectBoundDown = true;
+            //
+            Button.selected = this;
+            Button.selectedShape = this.text;
+
         }
-        console.log("mouse down event");
+        else{
+            this.rectBoundDown = false;
+        }
 
     }
 
-    move(e){
-        this.circularBound = this.circularBoundCheck(this.x, this.y, this.xMouse, this.yMouse, this.R);
+    mMove(e){
         this.xMouse = e.offsetX;
         this.yMouse = e.offsetY;
+        this.rectBound = this.boundsCheck(this.xMouse, this.yMouse, this.x, this.y, this.w, this.h);
     }
 
-    up(e){
-        this.mouseDown = false;
-        this.dragging = false;
-        console.log("mouse up event");
-
+    mUp(e){
+        console.log("button up");
     }
 
     update(){
+        //Drawing button
+        this.drawRect();
+        this.writeText();
 
+    }
 
-        if(this.dragging == true){
-            this.col = this.c2;
-            this.x = this.xMouse;
-            this.y = this.yMouse; 
+    drawRect(){
+        //If mouse is over the button it changes colour (highlighted)
+        //Once clicked the button changes colour to show its selected
+        if(this.rectBound){
+            ctx.fillStyle = this.over;
+        }else if( Button.selected == this){
+            ctx.fillStyle = this.col2;
         }
         else{
-            this.col = this.c1;
+            ctx.fillStyle = this.fill;
         }
-
-        this.draw();
-
-
-    
-    }
-    draw(){
-        this.drawCircle(this.x, this.y, this.R, this.col);
-
-    }
-
-
-    drawCircle(x,y,R,col){
         ctx.beginPath();
-        ctx.arc(x,y,R,0, 2*Math.PI);
-        ctx.fillStyle = col;
+        ctx.rect(this.x, this.y, this.w, this.h);
+        ctx.strokeStyle = this.stroke;
+        ctx.stroke();
         ctx.fill();
     }
 
-    circularBoundCheck(x1,y1,x2,y2,r){
-        var D = Math.sqrt(Math.pow(x2-x1,2)+Math.pow(y2-y1,2));
-        
-        if(D<r){
-            console.log("true");
+    writeText(){
+        //Function for writing the text within the button
+        ctx.fillStyle = this.textC;
+        ctx.font = "30px black";
+        ctx.textAlign = "center";
+        const baseline = ['middle'];
+        ctx.textBaseline = baseline;
+        ctx.fillText(this.text,this.x + this.w/2,this.y + this.h/2);
+    }
+
+    boundsCheck(xMouse,yMouse,x,y,w,h){
+        //Boundary check to see if its within the button
+        if(xMouse>x && xMouse<x+w && yMouse>y && yMouse<y+h){
             return true;
         }
         else{
@@ -89,6 +102,9 @@ class Point{
 
 
     }
-
+    
 
 }
+//
+Button.selected = ""
+Button.selectedShape = ""
