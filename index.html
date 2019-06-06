@@ -12,32 +12,34 @@
     h2, h3{color: rgb("a6acaf");
         font-size: 20px;}
     p{color:rgb("212f3c");}
+    hr{
+        height: 5px;
+        color:black;
+        background-color:black;
+        border: none;
+        }
 
     </style>
 </head>
 <body>
-
+<u><h1><DIV size = 20px style="text-align: center; width:1000px; height:100px,">Drawing Application</DIV></h1></u>
 <p>My aim for this assessment is to create a drawing application. 
     Which is easily accessable and easy to use. 
-    It should allow you to draw shapes and change colours by the click of a button.</p>
+    It should allow you to draw shapes a variety of shapes and change colours by the click of a button.</p>
     <hr>
-<h1> Sprint 1</h1>
+<!----------------------------------------------------------------->
+<h1>Sprint 1</h1>
 <p> Within this Sprint I want to be able to draw a rectangle within a 
     defined area on a canvas (within a boundary).
 </p>
 <h2>Planning</h2>
 <img width="440" height="280" src="Trello/sprint1.jpg" alt="Sprint 1 planning">
 <h2>Files used within my Sprint</h2>
-<li><a href="functions/function.html"> Functions set</a>
-    Circle, Rectangle and Line </li>
-    <p>Below is my Trello board for this page:</p>
-    <img width="440" height="280" src="Trello/Screenshot.jpg" alt="Functions Trello Board">
-    <hr>
 <li><a href="dragging/dragging.html"> Dragging</a>
     Dragging and dropping to create a rectangle </li>
     <p>Below is my Trello board for this page:</p>
     <img width="440" height="280" src="Trello/dragging.png" alt="Dragging Trello Board">
-    <hr>
+    
 <li><a href="boundary/boundary.html"> Boundary</a>Drawing within a boundary </li>
     <p>Below is my Trello board for this page:</p>
     <img width="440" height="280" src="Trello/boundary.png" alt="Boundary Trello Board">
@@ -62,8 +64,8 @@
     </video> 
 
     <hr>
-
-<h1> Sprint 2</h1>
+<!----------------------------------------------------------------->
+<h1>Sprint 2</h1>
 <p> Within this second Sprint I wish to be able to draw both rectangles and ellipses' within a boundary. Also being able to 
         utilise buttons to alter between my chosen shape to draw with.
 </p>
@@ -72,13 +74,13 @@
     Dragging and dropping to create a Ellipse </li>
     <p>Below is my Trello board for this page:</p>
      <img width="440" height="280" src="Trello/circle.png" alt="Functions Trello Board">
-    <hr>
+    
 <li><a href="button/buttons.html"> Shape Buttons</a>
     Being able to switch between buttons to change the shape you draw with </li>
     <p>Below is my Trello board for this page:</p>
     <img width="440" height="280" src="Trello/ShapeButtons1.png" alt="Shape Buttons Trello Board">
     <img width="440" height="280" src="Trello/ShapeButtons2.png" alt="Shape Buttons Trello Board">
-    <hr>
+    
     
 <h3>Testing Sprint 2</h3>
 <p>This video is a test for checking that I am able to draw a ellipse within the boundary and without faults.
@@ -99,6 +101,175 @@
         <source src="Videos/shapeButtons.mov">
         Your browser does not support the video tag.
     </video> 
+
+    <hr>
+<!----------------------------------------------------------------->
+<h1>Sprint 3</h1>
+<p> Within this third sprint I want to be able to selected between different colours to change the colour which my user is able
+    to draw shapes with.
+</p>
+<h2>Files used within my Sprint</h2>
+<li><a href="colours/colours.html"> Colours</a>
+    Clicking onto colours to change the colour of the shape drawn </li>
+    <p>Below is my Trello board for this page:</p>
+        <img width="440" height="280" src="Trello/colours 1.png" alt="colours 1 Trello Board">
+        <img width="100" height="280" src="Trello/colours 2.png" alt="colours 2 Trello Board">
+    
+
+<h3>Testing Sprint 3</h3>
+<p>This video is a test for checking that I am able to click between the colours and for them to change the colour of the shape that 
+    I draw based off the colour I chose. It is also the check to see that when clicking on the colour the linewidth changes
+    colour to display it is highlight. All seems to work well. 
+</p>
+    <video width="440" height="280" controls>
+    <source src="Videos/colourCheck.mov">
+    Your browser does not support the video tag.
+    </video>
+    <hr>
+<!----------------------------------------------------------------->
+<h1>Sprint 4</h1>
+<p> I have completed making a undo and reset button in this sprint, so the user is able to remove mistakes on the application.
+</p>
+<h2>Files used within my Sprint</h2>
+<li><a href="reset/reset.html"> Reset and Undo buttons</a>
+    Making buttons that allow the user to undo or reset the canvas </li>
+    <p>Below is my Trello board for this page:</p>
+    <img width="440" height="280" src="Trello/reset.png" alt="Reset/Undo Trello Board">
+    
+        
+<h3>Testing Sprint 4</h3>
+<p>In this video you will be able to see me testing to check that my reset and undo buttons work. After fixing problems such as 
+    the fact that the click wasn't working properly unless I chose the shape button again therefore causing it to constantly undo.
+    After fixing those problems as shown in this video it all works well. However later issue to fix would be perhaps for it to 
+    go back to its orignal shape after undo is selected instead of having to go back and click on the shape again. 
+    </p>
+    <video width="440" height="280" controls>
+    <source src="Videos/resetCheck.mov">
+    Your browser does not support the video tag.
+    </video> 
+    <hr>
+
+<!----------------------------------------------------------------->
+<h1>Sprint 5</h1>
+<p> In this sprint I am going to introduce 2 new shapes, a line and then a circle, and create buttons for both. 
+</p>
+<h2>Files used within my Sprint</h2>
+<li><a href="line/line.html"> Drawing a Line</a>
+    Creating a line drawing button/function </li>
+    
+<li><a href="rounded circle/circle.html"> Drawing a perfect Circle</a>
+    Creating a button which when clicked allows the user to draw a perfect circle </li>
+    <p>Below is my Trello board for this page:</p>
+    <img width="440" height="280" src="Trello/Line:Circle 1.png" alt="Shape Buttons Trello Board">
+    <img width="100" height="280" src="Trello/Line:Circle 2.png" alt="Shape Buttons Trello Board">
+    
+
+<h3>Testing Sprint 5</h3>
+<p>As you can see in this video I am checking to see that my line button works. I am checking to see that similar to my other buttons
+    it remains within the canvas and doesn't allow the user to draw outside of it. Also checking to see the line changes colour correctly.
+    All is working good, expect a later issue I should fix is to have a default colour so if a shape is selected it will draw a shape despite not 
+    having chosen a colour yet. As you can see I am yet to have this as shown in the end of this video.
+    </p>
+    <video width="440" height="280" controls>
+    <source src="Videos/lineCheck.mov">
+        Your browser does not support the video tag.
+    </video> 
+<p>When watching the video below you will see that I am testing to check my circle button works. This button should create 
+    a perfect circle, unlike the ellipse. As shown in the video I test to ensure that no matter what size the user draws the 
+    scaffolding rectangle a circle will not be drawn unless a perfect circle is able to be drawn. It can also be drawn in all directions
+    and doesn't draw beyond the canvas which is good. One thing I might change later on is creating a scaffolding circle so that it is easy
+    to draw a shape for the user instead of basing the circle off a rectangle. 
+    </p>
+    <video width="440" height="280" controls>
+    <source src="Videos/circleCheck.mov">
+        Your browser does not support the video tag.
+    </video> 
+    <hr>
+
+<!-------------------------------------------------------------->
+<h1>Sprint 6</h1>
+<p> Here I attempt to make new shapes and include a element of animation. With a rotating circle and rotating rectangle.
+</p>
+<h2>Files used within my Sprint</h2>
+<li><a href="rotating/rotating.html"> Rotating objects</a>
+    Making shapes that are able to rotate and can be drawn by the user</li>
+    <p>Below is my Trello board for this page:</p>
+    <img width="440" height="280" src="Trello/rotating.png" alt="Reset/Undo Trello Board">
+    
+        
+<h3>Testing Sprint 6</h3>
+<p>In this video you can see as I check to see that both my rotating rectangle and rotating circles don't go past the canvas boundary.
+    You can also see me checking that all the colours work which they do and is good! Perhaps introducing different colour opacitys would
+    be cool so that when overlapping the shapes you could see them better and create cool patterns.
+    </p>
+    <video width="440" height="280" controls>
+    <source src="Videos/rotatingCheck.mov">
+    Your browser does not support the video tag.
+    </video> 
+    <hr>
+<!----------------------------------------------------------------->
+<h1>Sprint 7</h1>
+<p> In this sprint I am cleaning up my style and format of the drawing application. 
+</p>
+<h2>Files used within my Sprint</h2>
+<li><a href="style/style.html"> Updated Style</a>
+    Making shapes that are able to rotate and can be drawn by the user</li>
+    <p>Below is my Trello board for this page:</p>
+    <img width="440" height="280" src="Trello/reset.png" alt="Reset/Undo Trello Board">
+    
+        
+<h3>Testing Sprint 7</h3>
+<p>In this video you will be able to see me testing to check that my reset and undo buttons work. After fixing problems such as 
+    the fact that the click wasn't working properly unless I chose the shape button again therefore causing it to constantly undo.
+    After fixing those problems as shown in this video it all works well. However later issue to fix would be perhaps for it to 
+    go back to its orignal shape after undo is selected instead of having to go back and click on the shape again. 
+    </p>
+    <video width="440" height="280" controls>
+    <source src="Videos/resetCheck.mov">
+    Your browser does not support the video tag.
+    </video> 
+    <hr>
+<!----------------------------------------------------------------->
+<h1>Relevant Implications</h1>
+<u><h2>Future Proofing</h2></u>
+<p>Program is designed so new features can be added easily and old ones removed. 
+    </p>
+<h4>How have I addressed this?</h4>
+<p>I have addressed this based off the way that my program has been designed
+        For program elements including colours, buttons, shapes, have all been programed as objects. This therefore means that each is almost like a self-contained modular piece of code, that takes a defined set of parameters to work. 
+        <br>(Many of these pieces of code take basic mouse data and colour information).<br>
+        All objects are built to a similar structure, and compulsorily contain a update function which means that they can appear on the interface utilising the update call. 
+        Management of most of the objects happens in a central file, aka. drawingPage.js.<br>
+        The idea behind this is that an experienced programmer is able to easily remove elements or add new features. Also the code is throughrally commented so it is easy to change via this as they are precise and formative. 
+        
+    </p>
+    <br>
+<u><h2>Functionality</h2></u>
+<p>Does the program work well?<br> 
+        Free of bugs, loads quickly, works on different browsers.   
+    </p>
+<h4>How have I addressed this?</h4>
+<p>Program is in pure javascript. It has no graphics so therefore loads very quickly. I have tested this by using a live web server to store my versions, and have of course observed loading performance as I have been developing.<br>
+        To ensure the program works well I have systematically tested it. Tested user interactions, through position of clicking and direction of dragging. This has included careful checks around boundaries.<br>
+        The use of Math.abs function was discovered after testing failures drawing circular shapes. (because these objects were being given negative radius values).<br>
+        Any new components were tested prior to being added to the main program.<br>
+        At various stages in sprints console logging was used to analyse boundary test functions, and to locate problems when bugs appeared. 
+    </p>
+<br>
+<u><h2>Examples of trialling and making decisions</h2></u>
+<h4>Can you find examples of exploring different options and making a decision about which is the best solution?</h4>
+<p>Trialling different options for allowing the user to draw lines on screen. Giving a line or rectangular guides so that the user can see where their line will be drawn.
+</p>
+<h4>Effectively using information from testing and trialing to improve the functionality of the outcome. 
+        Interface design trialling colour themes.</h4>
+<p>Finding situations when objects drew outside of the drawing area (in spite of having in.boundary parameters) led to the use for the clip() function.</p>
+<h4>How did your working process (planning, testing trialling) lead to the development of a high quality digital outcome?</h4>
+<p>The agile process allowed planning and development to happen together.<br>
+        Breaking the project up into smaller pieces, allowing each element to be focused on and allowing a backup file to retreat to.<br>  
+        Created repeated cycles of plan, then develop, and then finally test. One cycle of this is also known as a sprint.<br>
+        After two or three sprints I got a much clearer idea of what I could achieve and my aims became much more focused and realistic.<br> 
+        Helped to see the project in a highly simplified form at the start (potentially shippable product).  
+        </p>
 <ul>
 
 </ul>

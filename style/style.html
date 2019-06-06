@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Boundary</title>
+    <style type="text/css">
+    body{
+        background-color: rgb(199,199,199);
+    }
+    canvas{
+        background-color: rgb(95,95,95);
+        width:1012px;
+        height:600px;
+    }
+    .wrapper{
+        border: 3px solid rgb(221, 221, 221);
+        width: 800px;
+        height: 600px;
+        margin: auto;
+    }
+    </style>
+</head>
+<body>
+    <!-------Text------------->
+    <h1><DIV size = 20px style="position: absolute; top: 25px; left:380px; width:1000px; height:100px,">Drawing Application</DIV></h1>
+    <h3><DIV size = 10px style="position: absolute; top: 485px; left:75px; width:1000px; height:100px,">Brush Width</DIV></h3>
+    <h2><DIV size = 20px style="position: absolute; top: 20px; left:90px; width:1000px; height:100px,">Shapes</DIV></h2> 
+    <h3><DIV size = 20px style="position: absolute; top: 545px; left:70px; width:1000px; height:100px,">Undo Buttons</DIV></h3>
+    <h3><DIV size = 20px style="position: absolute; top: 50px; left:800px; width:1000px; height:100px,">How to Draw:</DIV></h3>
+    <p><DIV size = 20px style="position: absolute; top: 80px; left:800px; width:1000px; height:100px,">1. Start off by selecting a shape <br>button
+    <br> 2. Selected a colour from the <br>colour palette
+    <br> 3. Drag on the WHITE canvas <br>to draw your shape in the colour <br>you chose
+    <br> 4. If you want to undo a shape <br>click the 'Undo' button. If you <br>want to start from the beginning <br>with a clean 
+    canvas click the <br>'Reset' button
+    <br> 5. Have fun and create your <br>masterpiece!</DIV></p>
+    <!-------Files------------>
+    <canvas id='myCanvas'></canvas>
+    <script type="text/javascript" src="init.js"> </script>
+    <script type="text/javascript" src="rectangle.js"> </script>
+    <script type="text/javascript" src="ellipse.js"> </script>
+    <script type="text/javascript" src="rotatingRectangle.js"> </script>
+    <script type="text/javascript" src="rotatingCircle.js"> </script>
+    <script type="text/javascript" src="pattern.js"> </script>
+    <script type="text/javascript" src="line.js"> </script>
+    <script type="text/javascript" src="brush.js"> </script>
+    <script type="text/javascript" src="circle.js"> </script>
+    <script type="text/javascript" src="widthButton.js"> </script>
+    <script type="text/javascript" src="shapeButton.js"> </script>    
+    <script type="text/javascript" src="colourButton.js"> </script>  
+    <script type="text/javascript" src="drawingPage.js"> </script>    
+    <script type="text/javascript" src="main.js"> </script> 
+</body>
+</html>
