@@ -1,4 +1,4 @@
-console.log("dragging js called");
+console.log("drawing Page js called");
 
 class Dragging{
     constructor(col, fill, canvas){
@@ -45,6 +45,7 @@ class Dragging{
             this.mouseDown = false;
         }
 
+
     }
 
     mMove(e){
@@ -67,6 +68,27 @@ class Dragging{
                this.objectSet.push(tempEllipse);
 
            }
+            //Calling the line function if 'Line' button is selected
+            else if(Shape.selectedShape == 'Line'){
+                var tempLine = new Line(this.xMouseStart, this.yMouseStart, this.xMouse, this.yMouse, this.fill);
+                this.objectSet.push(tempLine);
+         
+            }
+            else if(Shape.selectedShape == 'Drawing'){
+                var tempDrawing = new Drawing(this.mouseDown, this.xMouse, this.yMouse, this.xMouseStart, this.yMouseStart, this.fill);
+                this.objectSet.push(tempDrawing);
+         
+            }
+        }
+        //Calling the reset and undo buttons to be made
+        if(Shape.selectedShape == 'Reset'){
+            this.objectSet = [];
+            Shape.selected = "";
+        }
+        if(Shape.selectedShape == 'Undo'){
+            this.objectSet.pop();
+            Shape.selected = "";
+            Shape.selectedShape = "";
         }
         this.mouseDown = false;
     }
@@ -131,3 +153,4 @@ class Dragging{
 
     }
 }
+

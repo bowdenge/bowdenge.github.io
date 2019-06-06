@@ -12,7 +12,7 @@ class Dragging{
         this.yMouse = 0;
         this.xMouseStart = 0;
         this.yMouseStart = 0;
-        // set when down in bounds stays true once mouse pressed
+        //set when down in bounds stays true once mouse pressed
         //set false on mouse up
         this.mouseDown = false;
 
@@ -57,9 +57,7 @@ class Dragging{
 
     mUp(e){
         if(this.mouseDown && this.rectBound){
-           // var ROne = new Rectangle(this.xMouseStart, this.yMouseStart, this.dx, this.dy, this.fill);
-           
-           // Calling the Ellipse class similar to how we did with the Rectangle which mouse is up to then draw a Ellipse
+           //Calling the Ellipse class similar to how we did with the Rectangle which mouse is up to then draw a Ellipse
             var tempEllipse = new Ellipse(this.xMouseStart, this.yMouseStart, this.xMouse, this.yMouse, this.fill);
             this.objectSet.push(tempEllipse);
         }
