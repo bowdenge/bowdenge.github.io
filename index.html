@@ -22,7 +22,7 @@
     </style>
 </head>
 <body>
-<u><h1><DIV size = 20px style="text-align: center; width:1000px; height:100px,">Drawing Application</DIV></h1></u>
+<u><h1><DIV size = 20px style="text-align: center; width:1000px; height:100px,">Drawing Application - Georgia Bowden</DIV></h1></u>
 <p>My aim for this assessment is to create a drawing application. 
     Which is easily accessable and easy to use. 
     It should allow you to draw shapes a variety of shapes and change colours by the click of a button.</p>
@@ -69,6 +69,8 @@
 <p> Within this second Sprint I wish to be able to draw both rectangles and ellipses' within a boundary. Also being able to 
         utilise buttons to alter between my chosen shape to draw with.
 </p>
+<h2>Planning</h2>
+<img width="440" height="280" src="Trello/sprint2.jpg" alt="Sprint 2 planning">
 <h2>Files used within my Sprint</h2>
 <li><a href="circle/circle.html"> Drawing a Ellipse</a>
     Dragging and dropping to create a Ellipse </li>
@@ -108,6 +110,8 @@
 <p> Within this third sprint I want to be able to selected between different colours to change the colour which my user is able
     to draw shapes with.
 </p>
+<h2>Planning</h2>
+<img width="440" height="280" src="Trello/sprint3.jpg" alt="Sprint 3 planning">
 <h2>Files used within my Sprint</h2>
 <li><a href="colours/colours.html"> Colours</a>
     Clicking onto colours to change the colour of the shape drawn </li>
@@ -130,11 +134,13 @@
 <h1>Sprint 4</h1>
 <p> I have completed making a undo and reset button in this sprint, so the user is able to remove mistakes on the application.
 </p>
+<h2>Planning</h2>
+<img width="440" height="280" src="Trello/sprint4.jpg" alt="Sprint 4 planning">
 <h2>Files used within my Sprint</h2>
 <li><a href="reset/reset.html"> Reset and Undo buttons</a>
     Making buttons that allow the user to undo or reset the canvas </li>
     <p>Below is my Trello board for this page:</p>
-    <img width="440" height="280" src="Trello/reset.png" alt="Reset/Undo Trello Board">
+    <img width="440" height="280" src="Trello/undo:reset.png" alt="Reset/Undo Trello Board">
     
         
 <h3>Testing Sprint 4</h3>
@@ -153,6 +159,8 @@
 <h1>Sprint 5</h1>
 <p> In this sprint I am going to introduce 2 new shapes, a line and then a circle, and create buttons for both. 
 </p>
+<h2>Planning</h2>
+<img width="440" height="280" src="Trello/sprint5.jpg" alt="Sprint 5 planning">
 <h2>Files used within my Sprint</h2>
 <li><a href="line/line.html"> Drawing a Line</a>
     Creating a line drawing button/function </li>
@@ -190,6 +198,8 @@
 <h1>Sprint 6</h1>
 <p> Here I attempt to make new shapes and include a element of animation. With a rotating circle and rotating rectangle.
 </p>
+<h2>Planning</h2>
+<img width="440" height="280" src="Trello/sprint6.jpg" alt="Sprint 6 planning">
 <h2>Files used within my Sprint</h2>
 <li><a href="rotating/rotating.html"> Rotating objects</a>
     Making shapes that are able to rotate and can be drawn by the user</li>
@@ -209,23 +219,32 @@
     <hr>
 <!----------------------------------------------------------------->
 <h1>Sprint 7</h1>
-<p> In this sprint I am cleaning up my style and format of the drawing application. 
+<p> In this sprint I am cleaning up my style and format of the drawing application as well as creating a brush and pattern button. 
 </p>
+<h2>Planning</h2>
+<img width="440" height="280" src="Trello/sprint71.jpg" alt="Sprint 7 planning">
+<img width="440" height="280" src="Trello/sprint72.jpg" alt="Sprint 7 planning">
 <h2>Files used within my Sprint</h2>
-<li><a href="style/style.html"> Updated Style</a>
-    Making shapes that are able to rotate and can be drawn by the user</li>
-    <p>Below is my Trello board for this page:</p>
-    <img width="440" height="280" src="Trello/reset.png" alt="Reset/Undo Trello Board">
-    
+<li><a href="style/style.html"> Updated Style and new buttons</a>
+    Changing the style of the application as well as introducing 2 new buttons button</li>
+    <p>Below is my Trello boards for this page:</p>
+    <img width="440" height="280" src="Trello/brush 1.png" alt="Brush Trello Board">
+    <img width="100" height="280" src="Trello/brush 2.png" alt="Brush Trello Board">
+    <img width="440" height="280" src="Trello/style update.png" alt="Style update Trello Board">
         
 <h3>Testing Sprint 7</h3>
-<p>In this video you will be able to see me testing to check that my reset and undo buttons work. After fixing problems such as 
-    the fact that the click wasn't working properly unless I chose the shape button again therefore causing it to constantly undo.
-    After fixing those problems as shown in this video it all works well. However later issue to fix would be perhaps for it to 
-    go back to its orignal shape after undo is selected instead of having to go back and click on the shape again. 
+<p>You will see me in this video testing my new buttons and width buttons with the brush, as well as checking all my style is good. 
+    The colours no longer glitch and they click through perfectly which is good. The pattern
+    button works well and you are able to create a variety of designs based off the rectangle drawn.
+    It also doesn't draw beyond the canvas. However I a future problem to fix would be to make the pattern as big as the users
+    rectangle drawn as it is a bit confusing otherwise as the pattern appears large due to the rectangles forming it being the size of the 
+    drawn shape by the user. The brush works well and works with the 
+    lower opacity colours well. Also all the width buttons work and are all the right sizes depending on the button chosen.
+    However I think one problem I would alter later on is creating a default size for the brush so that the user can draw 
+    immediately after selecting the brush.   
     </p>
     <video width="440" height="280" controls>
-    <source src="Videos/resetCheck.mov">
+    <source src="Videos/brush:style test.mov">
     Your browser does not support the video tag.
     </video> 
     <hr>
@@ -241,7 +260,8 @@
         All objects are built to a similar structure, and compulsorily contain a update function which means that they can appear on the interface utilising the update call. 
         Management of most of the objects happens in a central file, aka. drawingPage.js.<br>
         The idea behind this is that an experienced programmer is able to easily remove elements or add new features. Also the code is throughrally commented so it is easy to change via this as they are precise and formative. 
-        
+        <br> An example of future proofing found in the code is through creating loops for my colour
+        buttons so that it is easier for someone to come in and alter it, simply a change of two numbers.
     </p>
     <br>
 <u><h2>Functionality</h2></u>
@@ -259,10 +279,15 @@
 <u><h2>Examples of trialling and making decisions</h2></u>
 <h4>Can you find examples of exploring different options and making a decision about which is the best solution?</h4>
 <p>Trialling different options for allowing the user to draw lines on screen. Giving a line or rectangular guides so that the user can see where their line will be drawn.
+    Also trialling different colours for the colour buttons, at times lowering the opacity so that the entire rainbow is avaliable to the user.
 </p>
 <h4>Effectively using information from testing and trialing to improve the functionality of the outcome. 
         Interface design trialling colour themes.</h4>
-<p>Finding situations when objects drew outside of the drawing area (in spite of having in.boundary parameters) led to the use for the clip() function.</p>
+<p>Finding situations when objects drew outside of the drawing area (in spite of having in.boundary parameters) led to the use for the clip() function. Even 
+    discovering that the undo button would continue to undo unless a different button was chosen, therefore introducing the pop() function to remove just one aspect drawn in the objectSet list. 
+    Also trailling different sizes, placement and colours for buttons so that the user has a variety of colour options as well as perfect positioning of the buttons for all elements (Shapes, Colours, Width).
+    This placement has been tested to ensure easy access to change colours for user as well as swapping shapes and selecting widths for the brush.
+</p>
 <h4>How did your working process (planning, testing trialling) lead to the development of a high quality digital outcome?</h4>
 <p>The agile process allowed planning and development to happen together.<br>
         Breaking the project up into smaller pieces, allowing each element to be focused on and allowing a backup file to retreat to.<br>  
