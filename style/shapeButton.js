@@ -79,7 +79,7 @@ class Shape{
     writeText(){
         //Function for writing the text within the button
         ctx.fillStyle = this.textC;
-        ctx.font = "20px black";
+        ctx.font = "1em sans-serif";
         ctx.textAlign = "center";
         const baseline = ['middle'];
         ctx.textBaseline = baseline;

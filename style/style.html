@@ -11,7 +11,7 @@
     }
     canvas{
         background-color: rgb(95,95,95);
-        width:1012px;
+        width:1020px;
         height:600px;
     }
     .wrapper{
@@ -24,17 +24,23 @@
 </head>
 <body>
     <!-------Text------------->
-    <h1><DIV size = 20px style="position: absolute; top: 25px; left:380px; width:1000px; height:100px,">Drawing Application</DIV></h1>
-    <h3><DIV size = 10px style="position: absolute; top: 485px; left:75px; width:1000px; height:100px,">Brush Width</DIV></h3>
-    <h2><DIV size = 20px style="position: absolute; top: 20px; left:90px; width:1000px; height:100px,">Shapes</DIV></h2> 
-    <h3><DIV size = 20px style="position: absolute; top: 545px; left:70px; width:1000px; height:100px,">Undo Buttons</DIV></h3>
-    <h3><DIV size = 20px style="position: absolute; top: 50px; left:800px; width:1000px; height:100px,">How to Draw:</DIV></h3>
-    <p><DIV size = 20px style="position: absolute; top: 80px; left:800px; width:1000px; height:100px,">1. Start off by selecting a shape <br>button
+    <h1><DIV size = 20px style="font: 1em sans-serif; position: absolute; top: 25px; left:380px; width:290px; height:100px,">Drawing Application</DIV></h1>
+    <h3><DIV size = 10px style="font: 1em sans-serif; position: absolute; top: 485px; left:75px; width:200px; height:100px,">Brush Width</DIV></h3>
+    <h2><DIV size = 10px style="font: 1em sans-serif; position: absolute; top: 23px; left:88px; width:100px; height:100px,">Shapes</DIV></h2> 
+    <h3><DIV size = 20px style="font: 1em sans-serif; position: absolute; top: 545px; left:70px; width:200px; height:100px,">Undo Buttons</DIV></h3>
+    <h3><DIV size = 20px style="font: 1em sans-serif; position: absolute; top: 50px; left:800px; width:200px; height:100px,">How to Draw:</DIV></h3>
+    <p><DIV size = 20px style="font: 1em sans-serif; position: absolute; top: 80px; left:800px; width:500px; height:100px,">1. Start off by selecting a <br> shape button
+    <br>
     <br> 2. Selected a colour from the <br>colour palette
-    <br> 3. Drag on the WHITE canvas <br>to draw your shape in the colour <br>you chose
-    <br> 4. If you want to undo a shape <br>click the 'Undo' button. If you <br>want to start from the beginning <br>with a clean 
-    canvas click the <br>'Reset' button
-    <br> 5. Have fun and create your <br>masterpiece!</DIV></p>
+    <br>
+    <br> 3. Drag on the WHITE canvas <br>to draw your shape in the <br> colour you chose
+    <br>
+    <br> 4. If you want to undo a shape <br>click the 'Undo' button. If you <br>want to start from the <br> beginning with a clean 
+    <br>canvas click the 'Reset' button.
+    <br>
+    <br>5. If you want to use the brush <br> tool then you can change <br>the width of the brush by <br>selecting a brush width below <br>the brush button.
+    <br>
+    <br> 6. Have fun and create your <br>masterpiece!</DIV></p>
     <!-------Files------------>
     <canvas id='myCanvas'></canvas>
     <script type="text/javascript" src="init.js"> </script>
@@ -44,7 +50,8 @@
     <script type="text/javascript" src="rotatingCircle.js"> </script>
     <script type="text/javascript" src="pattern.js"> </script>
     <script type="text/javascript" src="line.js"> </script>
-    <script type="text/javascript" src="brush.js"> </script>
+
+ <script type="text/javascript" src="brush.js"> </script> 
     <script type="text/javascript" src="circle.js"> </script>
     <script type="text/javascript" src="widthButton.js"> </script>
     <script type="text/javascript" src="shapeButton.js"> </script>    

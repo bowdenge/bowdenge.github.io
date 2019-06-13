@@ -23,6 +23,7 @@ class RotatingRectangle{
         //Rotating rectangle function 
         ctx.save();
         ctx.translate(this.xC, this.yC);
+        //Rotating bit
         ctx.rotate(this.degrees*Math.PI/180);
         ctx.beginPath();
         ctx.rect(-this.w/2 ,-this.h/2, this.w, this.h);

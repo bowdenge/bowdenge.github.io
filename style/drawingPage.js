@@ -139,7 +139,9 @@ class Dragging{
         
         //Allowing the rectangle guide to be drawn
         if(this.mouseDown && this.rectBound){
+            if(Shape.selectedShape !="Brush"){
             this.draw();
+            }
         }
         ctx.restore();
     }

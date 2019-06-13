@@ -29,13 +29,15 @@ class Colour{
     }
 
 
-    mDown(e){     
+    mDown(e){  
+        
         //Checking if its within button boundary
         if (this.rectBound = this.boundsCheck(this.xMouse, this.yMouse, this.x, this.y, this.w, this.h)){
             this.rectBoundDown = true;
             //If within bounds then the colour that it is in bounds of will be the selected colour = this.colour
             Colour.selected = this;
             Colour.selectedColour = this.colour;
+            console.log(this.colour) ;
 
         }
         else{
@@ -56,6 +58,7 @@ class Colour{
     update(){
         //Drawing button
         this.drawRect();
+      // console.log(Colour.selectedColour);
 
     }
 

@@ -27,8 +27,8 @@ class Width{
     }
 
     mDown(e){
-        if(this.rectBound == true){
-            
+        //If within the rectangle (button) allow these variables to equal as so
+        if(this.rectBound == true){   
             Width.selected = this;
             Width.selectedWidth = this.width;
             Width.selectedRadius = this.radius;
@@ -36,17 +36,21 @@ class Width{
     }
 
     mMove(e){
+        //Calculating the mouse position 
         this.xMouse = e.offsetX;
         this.yMouse = e.offsetY;
+        //Boundary check
         this.rectBound = this.boundsCheck(this.xMouse, this.yMouse, this.x, this.y, this.w, this.h);
     }
 
     update(){
+        //Calling for the rectangle to be drawn and to write text in it
         this.draw();
         this.writeText();
         }
 
     draw(){
+        //Changing stroke and colour depending on if the mouse is within boundaries/clicked 
         if(Width.selected == this ){
             ctx.fillStyle = colArray[7][0];
         }
@@ -56,7 +60,7 @@ class Width{
         }else{
             ctx.fillStyle = this.fill
         }
-        
+        //drawing rectangle function
         ctx.beginPath();
         ctx.rect(this.x, this.y, this.w, this.h);
         ctx.strokeStyle = this.stroke;
@@ -67,14 +71,15 @@ class Width{
     }
 
     writeText(){
+        //Writing text within the button function
         ctx.fillStyle = this.textC;
-        ctx.font = "25px";
+        ctx.font = "1em sans-serif";
         ctx.textAlign = "center";
         const baseline = ['middle'];
         ctx.textBaseline = baseline;
         ctx.fillText(this.text,this.x + this.w/2,this.y + this.h/2);
     }
-
+    //Boundary check function
     boundsCheck(xM, yM, x, y, w, h){ 
     if(xM > x && xM < x + w && yM > y && yM < y+ h){
         return true;

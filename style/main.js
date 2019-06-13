@@ -5,11 +5,6 @@ var buttonSet = [];
 var myT = new Dragging( colArray[7][0], canvas);
 
 //Shape Buttons 
-/*for(var j = 0; j < 7; j++){
-    var shapes = new Shape(40, 60 + j*70, 160, 48, colArray[0][0], colArray[6][2], colArray[0][2], colArray[6][0],canvas);
-    buttonSet.push(shapes);
-
-}*/
 var DragOne = new Shape("Ellipse", 40, 30, 160, 48, colArray[0][0], colArray[6][2], colArray[0][2], colArray[6][0], canvas);
 buttonSet.push(DragOne);
 var DragTwo = new Shape("Rectangle", 40, 85, 160, 48, colArray[0][0], colArray[6][2], colArray[0][2], colArray[6][0], canvas);
@@ -34,8 +29,6 @@ var r3 = new Width("M", 105, 490, 30, 30, 0, 10, colArray[6][2], colArray[6][2],
 var r4 = new Width("L", 150, 490, 30, 30, 0, 15, colArray[6][2], colArray[6][2], colArray[6][0], colArray[7][0], canvas);
 var r5 = new Width("XL", 195, 490, 30, 30, 0, 20, colArray[6][2], colArray[6][2], colArray[6][0], colArray[7][0], canvas);
 buttonSet.push(r1, r2, r3, r4, r5);
-
-
 
 //Reset/Undo Buttons
 var R1 = new Shape("Reset", 120, 550, 70, 40, colArray[0][0], colArray[6][2], colArray[0][2], colArray[6][0], canvas);
